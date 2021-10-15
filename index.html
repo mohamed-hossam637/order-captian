@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="renderer" content="webkit" />
+  <title>DosaVIP Order Receivng Dashboard</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.core.min.js"></script>
+  <script>
+    var newOrderSound = new Howl({
+      src: ['https://address.beena.me/beena/static/sound/neworder.wav'],
+      html5: true
+    });
+
+  </script>
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+  <!-- font -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/cosmo/bootstrap.min.css' />
+  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' />
+  <link rel="stylesheet" id="css-skin" />
+
+  <style>
+    :root{
+      --main-color : #2780E3 ;
+    }
+    * :not(i){
+      font-family: 'Open Sans', sans-serif !important;
+    }
+    .btn-success-yellow {
+      background-color: var(--main-color);
+      border-color: var(--main-color);
+      color: #f0f9ff;
+    }
+
+    .btn-success:hover,
+    .btn-success:not(:disabled):not(.disabled):active,
+    .btn-success:not(:disabled):not(.disabled).active,
+    .show>.btn-success.dropdown-toggle {
+      color: var(--main-color);
+      border-color: var(--main-color);
+      background-color: #f0f9ff;
+    }
+
+    .beena-c-side-nav {
+      background-color: var(--main-color);
+      color: #f0f9ff;
+      text-align: right;
+      font-weight: bold;
+      padding: 5px 10px;
+    }
+
+    .icon-list {
+      margin-left: 20px;
+    }
+
+    .sidebar-nav {
+      padding: 0 !important;
+    }
+
+    .sidebar-nav .navbar-text .text-muted {
+      color: #f0f9ff !important;
+    }
+
+    .sidebar-nav .nav-item a {
+      color: #f0f9ff !important;
+    }
+
+    .sidebar-nav .nav-item a:hover {
+      color:var(--main-color) !important;
+    }
+
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+      color: var(--main-color) !important;
+      background-color: #fff;
+    }
+
+    th,
+    tr {
+      text-align: center;
+    }
+
+    .sidebar-nav .nav-item a {
+      color: #f0f9ff;
+      padding: 0.7rem 1rem;
+    }
+
+    .bg-primary {
+      background-color: var(--main-color)!important;
+    }
+
+
+    .btn-primary {
+      background-color: var(--main-color);
+      border-color: var(--main-color);
+    }
+    .btn-secondary, .btn-success, .btn-primary {
+      border-radius: 5px;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:not(:disabled):not(.disabled):active,
+    .btn-primary:not(:disabled):not(.disabled).active,
+    .show>.btn-primary.dropdown-toggle {
+      color: var(--main-color);
+      border-color: var(--main-color);
+      background-color: #f0f9ff;
+    }
+
+    .card-body {
+      color: #030303;
+    }
+
+    .was-validated .form-control:valid,
+    .form-control.is-valid {
+      border-color: var(--main-color);
+    }
+
+    .was-validated .form-control:valid:focus,
+    .form-control.is-valid:focus {
+      border-color: var(--main-color);
+      -webkit-box-shadow: 0 0 0 0.2rem rgb(63 182 24 / 25%);
+      box-shadow: 0 0 0 0.2rem #436cdd88;
+    }
+
+    tr:nth-child(even) {
+      background-color: #e5f0f3;
+    }
+    tr:nth-child(odd) {
+      background-color: white;
+    }
+    table {
+  border-collapse: collapse;
+  border-radius:0.5em;
+  overflow: hidden;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  margin: 25px 0px;
+  font-family:fantasy;
+}
+    .form {
+      text-align: center;
+      direction: rtl;
+    }
+
+    .form label {
+      margin: 5px 10px 5px 0;
+      color: rgba(0, 0, 0, 0.726) !important;
+      font-weight: bold;
+    }
+
+    .form ::placeholder,
+    .form select,
+    .form input {
+      text-align: left !important;
+    }
+
+    .form select {
+      max-width: 150px;
+    }
+
+    .form select,
+    .form input {
+      vertical-align: middle;
+      border-radius: 5px;
+    }
+    body{
+      background-color: #e5f0f3;
+    }
+    .data-table tbody td[aria-colindex = "9"] {
+      display: flex;
+    }
+  </style>
+</head>
+
+<body class="app sidebar-fixed  ">
+  <div id="css-custom"></div>
+
+  <div id="app"></div>
+
+  <div id="js-custom"></div>
+</body>
+
+</html>
